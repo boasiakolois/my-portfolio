@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lois | Portfolio</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Welcome To My Portfolio</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/projects /projects.html">Projects</a></li>
+      <li><a href="/about_me/about.html">About</a></li>
+
+      <li>
+        <a href="/resume/loisresume.pdf" target="_blank" class="resume-btn">Resume</a>
+      </li>      
+
+      <li><a href="https://github.com/boasiakolois" target="_blank">
+        <img src="/images/github.png" alt="GitHub" class="nav-icon">
+      </a>
+    </li>
+      <li><a href="https://www.linkedin.com/in/lois-boasiako-099373248/" target="_blank">
+        <img src="/images/linkedin.png" alt="LinkedIn" class="nav-icon"> 
+        </a>
+    </li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <img src="/images/profile.jpg" alt="Lois Headshot">
+    <h2>Hello, I’m Lois Boasiako ✨</h2>
+    <p>Hi! I’m an Information Science student at the State University of New York at Oswego (SUNY Oswego), graduating in May 2026. 
+      I’m passionate about technology and entrepreneurship, and my goal is to become a full-stack developer who builds innovative solutions to real-world problems.
+      <br><br>
+
+      With experience in both business and tech, I like to approach challenges from unique perspectives, blending creativity with practicality. 
+      I’m currently seeking Winter 2025 and Spring 2026 internships, as well as early-career opportunities in tech.
+      <br> <br>
+      
+      Feel free to explore my portfolio to learn more about my projects, skills, and journey!
+       </p>
+  </header>
+
+  <!-- Skills -->
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>HTML/HTML5</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li> MySQL</li>
+      <li>PostgreSQL</li>
+      <li>Database<br> Management<br> Systems</li>
+      <li>Database<br> Normalization</li>
+      <li>Object-Oriented<br> Programming<br> (OOP)</li>
+      <li>Front-End</li>
+      <li>Back-End</li>
+      <li>UX Design</li>
+      <li>Git</li>
+      <li>GitHub</li>
+      <li>Visual<br> Studio Code</li>
+      <li>Chrome DevTools</li>
+      <li>Prettier</li>
+      <li>Microsoft Office <br>Suite</li>
+      <li>Canva</li>
+      <li>Slack</li>
+      <li>Zoom</li>
+      <li>Notion</li>
+      <li>Google Calendar</li>
+      <li>SQL Database<br> Design</li>
+      <li>Financial<br> Analysis</li>
+      <li>Apple Calender</li>
+    </ul>
+<br>
+
+    <h2> Soft Skills</h2>
+     <ul>
+        <li>Leadership</li>
+        <li>Mentorship</li>
+        <li>Collaboration</li>
+        <li>Communication</li>
+        <li>Problem-<br>solving</li>
+        <li>Time-<br>Management</li>
+        <li>Organization</li>
+        <li>Adaptability</li>
+        <li>Initiative</li>
+        <li>Emotional <br>Intelligence</li>
+        <li>Conflict <br>Resolution</li>
+        <li>Attention<br> to <br>Detail</li>
+        <li>Creativity/<br>Innovation</li>
+        <li>Active <br>Listening</li>
+        <li>Hilarious</li>
+
+ 
+        </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Contact Me</h2>
+    <form id="my-form" action="https://formspree.io/f/xrbadlkr" method="POST">
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
+  
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" required></textarea>
+  
+      <button id="my-form-button">Submit</button>
+      <p id="my-form-status"></p>
+    </form>
+  </footer>
+  <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "✅ Thanks for your submission!";
+          status.style.color = "green";
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "❌ Oops! There was a problem submitting your form.";
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "❌ Oops! There was a problem submitting your form.";
+      });
+    }
+    
+    form.addEventListener("submit", handleSubmit);
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

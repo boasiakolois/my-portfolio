@@ -1,0 +1,135 @@
+section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+section h2 {
+  color: #800020; /* burgundy */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+
+
+/* AI Bot Section */
+.ai-bot {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: #fff8e7; /* butter yellow */
+    border: 2px solid #e75480; /* raspberry pink */
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(128, 0, 32, 0.1);
+  }
+  
+  .ai-bot h2 {
+    color: #800020; /* burgundy */
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  #chat-box {
+    background: #fff;
+    border: 2px solid #800020;
+    border-radius: 15px;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #chat-box p {
+    margin-bottom: 0.8rem;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #user-input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 2px solid #800020;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: none;
+    background: #800020;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #e75480;
+  }
+  
+  /* Responsive AI Bot */
+  @media (max-width: 768px) {
+    .ai-bot {
+      padding: 1.5rem;
+    }
+  
+    #chat-box {
+      min-height: 250px;
+    }
+  
+    #user-input {
+      font-size: 0.95rem;
+    }
+  
+    button {
+      padding: 10px 15px;
+      font-size: 0.95rem;
+    }
+  }
+
+  .example-questions {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .example-questions p {
+    margin-bottom: 0.5rem;
+    color: #800020;
+    font-weight: bold;
+  }
+  
+  .example-btn {
+    background: #e75480;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin: 3px 3px 0 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  .example-btn:hover {
+    transform: scale(1.05);
+    background: #800020;
+  }
+  
+  
+  

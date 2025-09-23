@@ -1,0 +1,93 @@
+ /* Skills Section */
+  
+ .skills {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .skills h2 {
+    margin-bottom: 2rem;
+    color: #800020;
+  }
+  
+  .skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    gap:1rem;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .skills li {
+    background: #e75480; /* raspberry pink */
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: transform 0.3s, background 0.3s;
+    text-align: center;
+  }
+  
+  .skills li:hover {
+    transform: scale(1.05);
+    background: #800020;
+  }
+
+/* ===============================
+   SKILL PILLS - override & fix
+   Paste at the end of style.css
+   =============================== */
+
+/* Ensure the container doesn't force children to stretch */
+.skills, .skills ul, .project-skills, .project-skills ul {
+  display: flex !;
+  flex-wrap: wrap ;
+  gap: 14px ;
+  justify-content: center ;
+  align-items: flex-start ;    /* <-- prevents vertical stretching */
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* Make each pill shrink-wrap to its text (no fixed height) */
+.skills li,
+.skills .skill,
+.project-skills li,
+.project-skills .skill {
+  display: inline-block ;      /* shrink to fit text */
+  vertical-align: middle;
+  box-sizing: border-box ;
+  height: auto ;               /* clear any fixed height */
+  min-height: 0 ;              /* clear any min-height */
+  padding: 10px 18px ;         /* spacing inside pill */
+  border-radius: 999px ;       /* full pill */
+  background: #e75480 ;        /* raspberry */
+  color: white ;
+  font-weight: 600 ;
+  font-size: 1rem ;
+  line-height: 1 ;             /* prevent extra vertical space */
+  white-space: nowrap ;        /* keep each skill on one line */
+  text-align: center;
+  margin: 6px ;
+}
+
+/* Hover styling */
+.skills li:hover,
+.project-skills li:hover {
+  transform: scale(1.06);
+  background: #800020 ;        /* burgundy on hover */
+  transition: transform 0.18s ease, background 0.2s ease;
+}
+
+/* Small-screen tweak (reduce pill padding and font a bit) */
+@media (max-width: 768px) {
+  .skills li,
+  .project-skills li {
+    font-size: 0.92rem ;
+    padding: 8px 14px ;
+    white-space: nowrap;
+  }
+}
+

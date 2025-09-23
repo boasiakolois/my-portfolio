@@ -1,0 +1,103 @@
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #800020; /* burgundy */
+    color: white;
+  }
+  
+  nav h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #e75480; /* raspberry pink */
+  }
+  .resume-btn {
+    background: #e75480; /* raspberry pink */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .resume-btn:hover {
+    background: #800020; /* burgundy */
+    transform: scale(1.05);
+  }  
+
+  .nav-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+  
+  .nav-icon:hover {
+    transform: scale(1.2);
+  }
+  /* 🌸 RESPONSIVE DESIGN */
+  @media (max-width: 1024px) {
+    nav ul {
+      gap: 0.5rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .skills ul {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .hero h2 {
+      font-size: 1.6rem;
+    }
+  
+    .skills ul {
+      grid-template-columns: 1fr 1fr; /* 2 per row on small screens */
+    }
+  }
+  

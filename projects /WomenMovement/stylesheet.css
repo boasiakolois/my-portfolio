@@ -1,0 +1,135 @@
+.painting{
+  border-radius: 5px;
+}
+
+
+body{
+  background-color: #fdfdfd;
+  font-family: sans-serif;
+  font-family: 'Merriweather', serif;
+  background-color: #f2f3f4;
+  color: #2B2D42;
+  margin: 0;
+}
+
+  h1, h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+
+nav {
+  background-color: black;
+  color: #f2f3f4;
+  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  color: white;
+  padding: 10px 0;
+  z-index: 1000;
+  grid-row: 1;
+  grid-column: 1 / 4;
+  align-self: center;
+}
+nav li{
+  display: inline;
+  padding: 5px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #FF6B6B;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  #women-title, #desc1, #desc2, #desc3, #occupy-title {
+    grid-column: 1 / -1;
+  }
+
+  #harlem_vid, #gallery {
+    width: 100%;
+    height: auto;
+  }
+}
+#ARbutton {
+  grid-column: 1 / 4;
+  justify-self: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#ARbutton button {
+  background: linear-gradient(135deg, #0096FF, #00C2FF);
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+form {
+  cursor: pointer;
+  color: white;
+  border: none;
+  font-family: sans-serif;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+#ARbutton button:hover {
+  background: linear-gradient(135deg, blue, #0096ff);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+#ARbutton button:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#ARbutton button i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.footer {
+  background-color: #5D1451 ;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 60px;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../WomenMovement/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>The Civil Rights Movement</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 1fr 2fr;
+        }
+
+        #desc1{
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        #gallery{
+            grid-row: 3;
+            grid-column: 1 / 4;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #instructions{
+            grid-row: 2;
+            grid-column: 3;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #untitled{
+            grid-row: 2;
+            grid-column: 2;
+            max-width: 75%;
+            max-height: 75%;
+            align-self: center;
+            justify-self: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+          <ul>
+            <li> <h2 style="display: inline;">NYC Art</h2> </li>
+            <li> <a href="galleryindex.html">Home</a></li>
+            <li> <a href="harlemren.html"> Harlem Rennaisance</a></li>
+            <li><a href="womens_suff.html"> Women's Suffrage Movement</a></li>
+            <li><a href="civil_rights.html">Civil Rights Movement</a></li>
+            <li><a href="occupy_ws.html">Occupy Wall Street</a></li>
+            </ul>
+        </nav>
+
+        <article id="desc1">
+            <h1>The Civil Rights Movement</h1>
+            <p>
+                Civil Rights Era art and photography played a pivotal role in capturing
+                 the struggles, triumphs, and everyday realities of the African American
+                 fight for equality in the 1950s and 1960s. Iconic images, such as those
+                 by photographers like Gordon Parks, Dorothea Lange, and Charles Moore,
+                 documented both the intense protests and the intimate, personal moments
+                 of Black life during a time of profound social change. These works not
+                 only served as visual testimonies to the systemic racism and brutality faced
+                 by Black Americans, but also acted as powerful tools for social justice, helping
+                 to galvanize the movement and inspire national and international support.
+                 Art from this period, whether in the form of paintings, sculptures, or music, often
+                 conveyed themes of resistance, resilience, and the desire for dignity, while challenging
+                 the dominant narratives of inequality. By pushing boundaries and highlighting untold stories,
+                 Civil Rights Era art and photography made an indelible mark on the cultural and political landscape,
+                 contributing significantly to the movement's impact.
+            </p>
+        </article>
+
+        <img src="ArtGalleryContent/normanlewis.webp" id="untitled">
+
+        <article id="instructions">
+            <h1>Art Gallery Instructions</h1>
+            <ul>
+                <li>Click anywhere on the floor to move around</li>
+                <li>Click and hold, then drag your mouse or move your finger on a trackpad to change your viewing angle</li>
+                <li>Click on any of the paintings to learn more about them</li>
+                <li>Click on any of the side buttons for volume controls, settings, etc.</li>
+            </ul>
+
+        </article>
+
+        <iframe id="gallery" width=85% height=100% src="https://www.artsteps.com/embed/672a457c3ba9ab87e022c9ff/560/315"
+         frameborder="0" allowfullscreen></iframe>
+        <!-- Finish page by adding the title and checking with
+        Hayden to make sure the art gallery is completed to insert-->
+    </div>
+</body>
+<footer class="footer">
+  <p>Discover more about NYC's legacy through the eyes of its artists.</p>
+  <a href="galleryindex.html" class="btn">Explore More Art</a>
+</footer>
+</html>

@@ -1,0 +1,37 @@
+@import url(/styles/about.css);
+@import url(/styles/footer.css);
+@import url(/styles/hero.css);
+@import url(/styles/nav.css);
+@import url(/styles/project.css);
+@import url(/styles/skills.css);
+
+
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    background-color: #fff8e7; /* butter yellow */
+    color: #2e1c1c; /* dark brown */
+    line-height: 1.6;
+  }
+  
+  
+  
+  
+  
+
+
+ 
+  
+ 
+  
+  

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../WomenMovement/stylesheet.css">
+    <title>Women's Suffrage Movement</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px auto auto auto auto;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        #occupy-main {
+            grid-column: 1 / 4;
+            justify-self: center;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #occupy-title {
+            grid-column: 1 / 4;
+            text-align: center;
+            grid-row: 2;
+        }
+
+        #weare, #jeanne, #occupy {
+            grid-column: span 1;
+            justify-self: center;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        #ARbutton {
+            grid-column: 1 / 4;
+            justify-self: center;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+
+        article h1 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+
+
+        nav{
+            grid-column: 1 / 4;
+            grid-row: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+          <ul>
+            <li> <h2 style="display: inline;">NYC Art</h2> </li>
+            <li> <a href="galleryindex.html">Home</a></li>
+            <li> <a href="harlemren.html"> Harlem Rennaisance</a></li>
+            <li><a href="womens_suff.html"> Women's Suffrage Movement</a></li>
+            <li><a href="civil_rights.html">Civil Rights Movement</a></li>
+            <li><a href="occupy_ws.html">Occupy Wall Street</a></li>
+            </ul>
+        </nav>
+
+        <img src="ArtGalleryContent/Occupymain.jpeg" id="occupy-main"
+        alt="Main occupy picture"
+        style="max-height: 75%;
+            max-width: 75%;">
+
+        <article id="occupy-title">
+            <h1>Occupy Wall Street Movement</h1>
+            <p>The Occupy Wall Street (OWS) movement began on September 17, 2011, in New York City's Zuccotti Park, in the Financial District of Manhattan. It was a grassroots protest aimed at addressing economic inequality, corporate greed, and the disproportionate influence of corporations on government. The movement was inspired by the broader Occupy Movement and influenced by events like the Arab Spring and anti-austerity protests in Europe.</p>
+        </article>
+
+        <article id="weare">
+            <h1>"We Are the 99%" Occupy Wall Street</h1>
+            <p>This emblematic poster represents the Occupy Wall Street movement, expressing themes of economic inequality and solidarity among the “99%” against the wealthiest 1%.</p>
+        </article>
+
+        <article id="jeanne">
+            <h1>Orange Occupy Wall Street Flyer</h1>
+            <p>This bold, minimalist flyer uses vibrant orange to draw attention, with simple yet striking typography that encapsulates the urgency and solidarity of the Occupy Wall Street movement.</p>
+        </article>
+
+        <article id="occupy">
+            <h1>Occupy Oakland with Police</h1>
+            <p>This intense poster juxtaposes protestors with police in the background, highlighting the confrontational atmosphere of the Occupy Oakland demonstrations and the resilience of activists against a backdrop of authority.</p>
+        </article>
+
+        <form action="civil_rights.html" id="ARbutton">
+          <button type="submit">
+            <i class="fas fa-vr-cardboard"></i> Visit our AR Art Gallery
+          </button>
+        </form>
+    </div>
+</body>
+<footer class="footer">
+  <p>Discover more about NYC's legacy through the eyes of its artists.</p>
+  <a href="galleryindex.html" class="btn">Explore More Art</a>
+</footer>
+</html>

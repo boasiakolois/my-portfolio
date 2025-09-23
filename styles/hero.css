@@ -1,0 +1,26 @@
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .hero img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 5px solid #e75480;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+  }
+  
+  .hero h2 {
+    font-size: 2.2rem;
+    color: #800020;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.1rem;
+  }
