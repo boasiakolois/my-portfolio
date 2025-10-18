@@ -1,123 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Lois</title>
-  <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-  <nav>
-    <h1>Welcome To My Portfolio</h1>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/projects /projects.html">Projects</a></li>
-      <li><a href="/about_me/about.html">About</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Lois</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Welcome To My Portfolio</h1>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/projects /projects.html">Projects</a></li>
+        <li><a href="/about_me/about.html">About</a></li>
 
-      <li>
-        <a href="/resume/loisresume.pdf" target="_blank" class="resume-btn">Resume</a>
-      </li>      
+        <li>
+          <a href="/resume/loisresume.pdf" target="_blank" class="resume-btn"
+            >Resume</a
+          >
+        </li>
 
-      <li><a href="https://github.com/boasiakolois" target="_blank">
-        <img src="/images/github.png" alt="GitHub" class="nav-icon">
-      </a>
-    </li>
-      <li><a href="https://www.linkedin.com/in/lois-boasiako-099373248/" target="_blank"></a>
-        <img src="/images/linkedin.png" alt="LinkedIn" class="nav-icon">
-    </li>
-    </ul>
-  </nav>
+        <li>
+          <a href="https://github.com/boasiakolois" target="_blank">
+            <img src="/images/github.png" alt="GitHub" class="nav-icon" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/lois-boasiako-099373248/"
+            target="_blank"
+          ></a>
+          <img src="/images/linkedin.png" alt="LinkedIn" class="nav-icon" />
+        </li>
+      </ul>
+    </nav>
 
-  <section >
-    <h2 class="">About Me</h2>
-    <p style="max-width:600px; margin:auto; text-align:center;">
-      Hi, I'm Lois! I'm an Information Science major with a passion for technology and entrepreneurship. 
-      My goal is to become a full-stack developer and create innovative tech solutions to complex problems. 
-      I was born and partially raised in Brooklyn, NY, and spent five years growing up in Ghana.
-      <br>
-      <br>
+    <section>
+      <h2 class="">About Me</h2>
+      <p style="max-width: 600px; margin: auto; text-align: center">
+        Hi, I'm Lois! I'm an Information Science major with a passion for
+        technology and entrepreneurship. My goal is to become a full-stack
+        developer and create innovative tech solutions to complex problems. I
+        was born and partially raised in Brooklyn, NY, and spent five years
+        growing up in Ghana.
+        <br />
+        <br />
 
-      Feel free to ask my AI assistant any questions or reach out to me using my contact form. I'd love to hear from you!
-    </p>
-  </section>
+        Feel free to ask my AI assistant any questions or reach out to me using
+        my contact form. I'd love to hear from you!
+      </p>
+    </section>
 
-  <!-- AI Assistant -->
-  <section class="ai-bot">
-    <h2>Ask My AI Assistant</h2>
-  
-    <!-- Chat Box -->
-    <div id="chat-box"></div>
-  
-    <!-- Example Questions -->
-    <div class="example-questions">
-      <p>Try asking:</p>
-      <button class="example-btn" onclick="fillExample('What are your skills?')">What are your skills?</button>
-      <button class="example-btn" onclick="fillExample('Tell me about your projects.')">Tell me about your projects.</button>
-      <button class="example-btn" onclick="fillExample('Who are you?')">Who are you?</button>
-    </div>
-  
-    <!-- Input Field -->
-    <div class="input-container">
-      <input id="user-input" type="text" placeholder="Ask me something..." />
-      <button onclick="askAI()">Send</button>
-    </div>
-  </section>
-  
-  
+    <!-- AI Assistant -->
+    <section class="ai-bot">
+      <h2>Ask My AI Assistant</h2>
 
-  <footer>
-    <h2>Contact Me</h2>
-    <form id="my-form" action="https://formspree.io/f/xrbadlkr" method="POST">
+      <!-- Chat Box -->
+      <div id="chat-box"></div>
 
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required />
+      <!-- Example Questions -->
+      <div class="example-questions">
+        <p>Try asking:</p>
+        <button
+          class="example-btn"
+          onclick="fillExample('What are your skills?')"
+        >
+          What are your skills?
+        </button>
+        <button
+          class="example-btn"
+          onclick="fillExample('Tell me about your projects.')"
+        >
+          Tell me about your projects.
+        </button>
+        <button class="example-btn" onclick="fillExample('Who are you?')">
+          Who are you?
+        </button>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required />
-  
-      <label for="message">Message:</label>
-      <textarea name="message" id="message" required></textarea>
-  
-      <button id="my-form-button">Submit</button>
-      <p id="my-form-status"></p>
-    </form>
-  </footer>
-  
-  <script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "✅ Thanks for your submission!";
-          status.style.color = "green";
-          form.reset();
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+      <!-- Input Field -->
+      <div class="input-container">
+        <input id="user-input" type="text" placeholder="Ask me something..." />
+        <button onclick="askAI()">Send</button>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Contact Me</h2>
+      <form id="my-form" action="https://formspree.io/f/xrbadlkr" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button id="my-form-button">Submit</button>
+        <p id="my-form-status"></p>
+      </form>
+    </footer>
+
+    <script>
+      var form = document.getElementById("my-form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = "✅ Thanks for your submission!";
+              status.style.color = "green";
+              form.reset();
             } else {
-              status.innerHTML = "❌ Oops! There was a problem submitting your form.";
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML =
+                    "❌ Oops! There was a problem submitting your form.";
+                }
+              });
             }
           })
-        }
-      }).catch(error => {
-        status.innerHTML = "❌ Oops! There was a problem submitting your form.";
-      });
-    }
-    
-    form.addEventListener("submit", handleSubmit);
-  </script>
-  
-  <script src="/script/script.js"></script>
-</body>
+          .catch((error) => {
+            status.innerHTML =
+              "❌ Oops! There was a problem submitting your form.";
+          });
+      }
+
+      form.addEventListener("submit", handleSubmit);
+    </script>
+
+    <script src="/script/script.js"></script>
+  </body>
 </html>
