@@ -1,0 +1,163 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lake View Coffee Roastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <!-- Header: two-row (logo/cart on top row, centered nav below) -->
+  <header class="site-header">
+
+    <nav class="nav-row">
+        <div class="container header-top">
+            <img src="/images/logo.png" alt="Lake View Coffee Roastery Logo" class="logo">
+            <div class="header-actions">
+              <button id="cart-btn" class="cart-btn" aria-haspopup="true" aria-expanded="false">
+                🧺 Cart <span id="cart-count" class="cart-count">0</span>
+              </button>
+            </div>
+          </div>
+
+      <div class="container nav-inner">
+        <a href="/index.html" class="nav-link active">Home</a>
+        <a href="/mission/mission.html" class="nav-link ">Mission</a>
+        <a href="/menu/menu.html" class="nav-link ">Menu</a>
+        <a href="/about/about.html" class="nav-link ">About</a>
+      </div>
+    </nav>
+
+    <!-- Cart Dropdown -->
+    <div id="cart-dropdown" class="cart-dropdown" aria-hidden="true">
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <div class="cart-controls">
+          <button id="checkout-btn" class="btn primary">Checkout</button>
+          <button id="clear-cart-btn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero with inline SVG white cup -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h1 class="title">Lake View Coffee Roastery</h1>
+        <p class="title-description">Small-batch roasts. Thoughtfully sourced. Brewed for community.</p>
+        <a class="btn primary" href="/menu/menu.html">Browse Menu</a>
+      </div>
+
+      <div class="hero-right">
+        <div class="cup-wrap" aria-hidden="true">
+          <img src="/images/coffee.png">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission teaser -->
+    <section class="teaser container card-style">
+      <div>
+        <h2>Our Mission</h2>
+        <p>We roast small batches and partner with farms that prioritize sustainability and care for their communities.</p>
+        <br>
+      </div>
+      <div class="teaser-action">
+        <a href="/mission/mission.html" class="btn">Read More</a>
+      </div>
+    </section>
+    <br>
+
+    <!-- Featured menu (populated by JS) -->
+    <section class="featured container card-style">
+      <h2>Popular on the Menu</h2>
+      <div class="cards" id="featured-cards"></div>
+      <div style="margin-top:1rem">
+
+        <section class="menu-grid" id="menu-grid">
+
+          <!-- Macchiato -->
+          <article class="card">
+            <img src="/images/macchiato.jpg" alt="Macchiato">
+            <h4>Macchiato — 8oz</h4>
+            <p class="muted">Bold espresso topped with a touch of silky foam.</p>
+            <div class="card-row">
+              <div class="price">$4.75</div>
+              <div class="card-actions">
+                <button class="btn" data-action="add-1" data-id="p1">+1</button>
+                <button class="btn primary" data-action="add" data-id="p1">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        
+          <!-- Matcha Latte -->
+          <article class="card">
+            <img src="/images/matchalatte.jpg" alt="Matcha Latte">
+            <h4>Matcha Latte — 12oz</h4>
+            <p class="muted">Earthy ceremonial matcha blended with steamed milk.</p>
+            <div class="card-row">
+              <div class="price">$6.50</div>
+              <div class="card-actions">
+                <button class="btn" data-action="add-1" data-id="p2">+1</button>
+                <button class="btn primary" data-action="add" data-id="p2">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        
+          <!-- Espresso Beans -->
+          <article class="card">
+            <img src="/images/expresso.jpg" alt="Espresso Beans">
+            <h4>Espresso Beans — 8oz Bag</h4>
+            <p class="muted">Rich, low-acidity blend perfect for smooth espresso shots.</p>
+            <div class="card-row">
+              <div class="price">$12.00</div>
+              <div class="card-actions">
+                <button class="btn" data-action="add-1" data-id="p3">+1</button>
+                <button class="btn primary" data-action="add" data-id="p3">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        
+        <a href="/menu/menu.html" class="btn">Full Menu</a>
+      </div>
+    </section>
+    <br>
+
+    <!-- Newsletter -->
+    <section class="newsletter container card-style">
+      <h3>Sign up for our newsletter</h3>
+      <form id="newsletter-form" class="newsletter-form" novalidate>
+        <input id="newsletter-email" type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn primary">Subscribe</button>
+      </form>
+      <p id="newsletter-msg" class="muted"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Lake View Coffee Roastery</h4>
+        <p class="muted">123 Lakeside Ave, City, State</p>
+      </div>
+      <br>
+      <div>
+        <h4>Hours</h4>
+        <p class="muted">Mon-Fri 7 am - 6 pm • Sat-Sun 8 am - 5 pm</p>
+      </div>
+      <br>
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">hello@lakeviewcoffee.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>

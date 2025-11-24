@@ -1,0 +1,82 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mission — Lake View Coffee Roastery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    body {
+       color: black;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+
+    <nav class="nav-row">
+        <div class="container header-top">
+            <img src="/images/logo.png" alt="Lake View Coffee Roastery Logo" class="logo">
+            <div class="header-actions">
+              <button id="cart-btn" class="cart-btn" aria-haspopup="true" aria-expanded="false">
+                🧺 Cart <span id="cart-count" class="cart-count">0</span>
+              </button>
+            </div>
+          </div>
+
+      <div class="container nav-inner">
+        <a href="/index.html" class="nav-link ">Home</a>
+        <a href="/mission/mission.html" class="nav-link active">Mission</a>
+        <a href="/menu/menu.html" class="nav-link">Menu</a>
+        <a href="/about/about.html" class="nav-link">About</a>
+      </div>
+    </nav>
+
+    <div id="cart-dropdown" class="cart-dropdown">
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <div class="cart-controls">
+          <button id="checkout-btn" class="btn primary">Checkout</button>
+          <button id="clear-cart-btn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card-style">
+      <h1>Our Mission</h1>
+      <p>At Lake View Coffee Roastery, we believe coffee is a bridge between communities.  Every batch we roast represents the farmers who cultivate it, the baristas who craft it, and the neighbors who share it.</p>
+
+      <h3>Ethical Sourcing</h3>
+      <p>We partner directly with small farms and co-ops that pay fair wages and invest in sustainable agriculture.  Each origin we feature is traceable from seed to cup.</p>
+
+      <h3>Environmental Care</h3>
+      <p>We roast in energy-efficient equipment, compost our waste, and source packaging that is fully recyclable.  Protecting our planet is as essential as crafting the perfect roast profile.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Lake View Coffee Roastery</h4>
+        <p class="muted">123 Lakeside Ave, City, State</p>
+      </div>
+      <br>
+      <div>
+        <h4>Hours</h4>
+        <p class="muted">Mon-Fri 7 am - 6 pm • Sat-Sun 8 am - 5 pm</p>
+      </div>
+      <br>
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">hello@lakeviewcoffee.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>

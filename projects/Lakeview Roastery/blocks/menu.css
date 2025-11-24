@@ -1,0 +1,37 @@
+/* ----------- Cards (Menu Items) ----------- */
+.cards,
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.8rem;
+  background-color: #F7F2E9;
+}
+
+.card h4 {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: #5D4037;
+}
+
+.card p {
+  color: #5D4037;
+  font-size: 0.9rem;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #3E2723;
+}

@@ -1,0 +1,47 @@
+/* ----------- Cup ----------- */
+.cup-wrap {
+    width: 400px;
+    height: 400px;
+  }
+
+  .title-description {
+    color: #fff;
+  }
+  
+  /* ----------- Sections ----------- */
+  .card-style {
+    background-color: #B5838D;
+    padding: 1rem;
+    border: 1px solid #B5838D;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+  }
+  
+  /* ----------- Buttons ----------- */
+
+  .btn {
+    background-color: #3E2723;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #5D4037;
+  }
+
+  
+  /* ----------- Newsletter ----------- */
+  .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

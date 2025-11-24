@@ -1,0 +1,92 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Lake View Coffee Roastery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    body {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+
+    <nav class="nav-row">
+        <div class="container header-top">
+            <img src="/images/logo.png" alt="Lake View Coffee Roastery Logo" class="logo">
+            <div class="header-actions">
+              <button id="cart-btn" class="cart-btn" aria-haspopup="true" aria-expanded="false">
+                🧺 Cart <span id="cart-count" class="cart-count">0</span>
+              </button>
+            </div>
+          </div>
+
+      <div class="container nav-inner">
+        <a href="/index.html" class="nav-link ">Home</a>
+        <a href="/mission/mission.html" class="nav-link">Mission</a>
+        <a href="/menu/menu.html" class="nav-link">Menu</a>
+        <a href="/about/about.html" class="nav-link active">About</a>
+      </div>
+    </nav>
+
+    <div id="cart-dropdown" class="cart-dropdown">
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <div class="cart-controls">
+          <button id="checkout-btn" class="btn primary">Checkout</button>
+          <button id="clear-cart-btn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card-style">
+      <h1>About Us</h1>
+      <p>Founded in 2018, Lake View Coffee Roastery began as a one-room workshop overlooking the lake.  Today we’re a small team of coffee enthusiasts who still hand-roast every batch and greet each guest by name.</p>
+      <br>
+      <h3>Meet Our Founder</h3>
+      <br>
+      <div class="owner-card">
+        <img src="/images/owner.png" alt="Owner portrait">
+        <br>
+
+        <div>
+          <h4>Jordan Walsh</h4>
+          <p class="muted">Founder & Roastmaster</p>
+          <p>Jordan trained with specialty roasters in Seattle before returning home to open Lake View.  Their goal: a neighborhood space where everyone can discover coffee that tells a story.</p>
+        </div>
+      </div>
+      <br>
+      <h3>Community Love</h3>
+      <blockquote class="muted">“Best coffee in town — and the friendliest baristas you’ll ever meet.” — Local Customer</blockquote>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Lake View Coffee Roastery</h4>
+        <p class="muted">123 Lakeside Ave, City, State</p>
+      </div>
+      <br>
+      <div>
+        <h4>Hours</h4>
+        <p class="muted">Mon-Fri 7 am - 6 pm • Sat-Sun 8 am - 5 pm</p>
+      </div>
+      <br>
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">hello@lakeviewcoffee.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>

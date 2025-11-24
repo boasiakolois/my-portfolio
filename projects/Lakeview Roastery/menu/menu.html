@@ -1,0 +1,250 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — Lake View Coffee Roastery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+
+    <nav class="nav-row">
+        <div class="container header-top">
+            <img src="/images/logo.png" alt="Lake View Coffee Roastery Logo" class="logo">
+            <div class="header-actions">
+              <button id="cart-btn" class="cart-btn" aria-haspopup="true" aria-expanded="false">
+                🧺 Cart <span id="cart-count" class="cart-count">0</span>
+              </button>
+            </div>
+          </div>
+
+      <div class="container nav-inner">
+        <a href="/index.html" class="nav-link ">Home</a>
+        <a href="/mission/mission.html" class="nav-link">Mission</a>
+        <a href="/menu/menu.html" class="nav-link active">Menu</a>
+        <a href="/about/about.html" class="nav-link">About</a>
+      </div>
+    </nav>
+
+    <div id="cart-dropdown" class="cart-dropdown" aria-hidden="true">
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+        <div class="cart-controls">
+          <button id="checkout-btn" class="btn primary">Checkout</button>
+          <button id="clear-cart-btn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="menu-intro">
+      <h1>Menu</h1>
+      <p class="muted">Small-batch roasts, pastries, and hand-crafted drinks. Click "Add to Cart" to build your order.</p>
+    </section>
+    <br>
+
+    <!-- Static menu cards so you see content immediately -->
+    <section class="menu-grid" id="menu-grid">
+
+      <!-- Macchiato -->
+      <article class="card">
+        <img src="/images/macchiato.jpg" alt="Macchiato">
+        <h4>Macchiato — 8oz</h4>
+        <p class="muted">Bold espresso topped with a touch of silky foam.</p>
+        <div class="card-row">
+          <div class="price">$4.75</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p1">+1</button>
+            <button class="btn primary" data-action="add" data-id="p1">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Matcha Latte -->
+      <article class="card">
+        <img src="/images/matchalatte.jpg" alt="Matcha Latte">
+        <h4>Matcha Latte — 12oz</h4>
+        <p class="muted">Earthy ceremonial matcha blended with steamed milk.</p>
+        <div class="card-row">
+          <div class="price">$6.50</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p2">+1</button>
+            <button class="btn primary" data-action="add" data-id="p2">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Espresso Beans -->
+      <article class="card">
+        <img src="/images/expresso.jpg" alt="Espresso Beans">
+        <h4>Espresso Beans — 8oz Bag</h4>
+        <p class="muted">Rich, low-acidity blend perfect for smooth espresso shots.</p>
+        <div class="card-row">
+          <div class="price">$12.00</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p3">+1</button>
+            <button class="btn primary" data-action="add" data-id="p3">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Flat White -->
+      <article class="card">
+        <img src="/images/flatwhite.jpg" alt="Flat White">
+        <h4>Flat White — 12oz</h4>
+        <p class="muted">Velvety microfoam poured over a double shot of espresso.</p>
+        <div class="card-row">
+          <div class="price">$5.75</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p4">+1</button>
+            <button class="btn primary" data-action="add" data-id="p4">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Hot Chocolate -->
+      <article class="card">
+        <img src="/images/hotchocolate.jpg" alt="Hot Chocolate">
+        <h4>Hot Chocolate — 12oz</h4>
+        <p class="muted">Creamy cocoa made with real chocolate and steamed milk.</p>
+        <div class="card-row">
+          <div class="price">$4.75</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p5">+1</button>
+            <button class="btn primary" data-action="add" data-id="p5">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Iced Americano -->
+      <article class="card">
+        <img src="/images/icedamericano.jpg" alt="Iced Americano">
+        <h4>Iced Americano — 16oz</h4>
+        <p class="muted">Chilled espresso over ice with crisp, clean flavor.</p>
+        <div class="card-row">
+          <div class="price">$4.50</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p6">+1</button>
+            <button class="btn primary" data-action="add" data-id="p6">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Iced Coffee -->
+      <article class="card">
+        <img src="/images/icedcoffee.jpg" alt="Iced Coffee">
+        <h4>Iced Coffee — 16oz</h4>
+        <p class="muted">Smooth cold-batch brew served over ice.</p>
+        <div class="card-row">
+          <div class="price">$4.75</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p7">+1</button>
+            <button class="btn primary" data-action="add" data-id="p7">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Iced Matcha -->
+      <article class="card">
+        <img src="/images/icedmatcha.jpg" alt="Iced Matcha">
+        <h4>Iced Matcha — 16oz</h4>
+        <p class="muted">Refreshing matcha shaken cold for a bright finish.</p>
+        <div class="card-row">
+          <div class="price">$6.25</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p8">+1</button>
+            <button class="btn primary" data-action="add" data-id="p8">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    
+      <!-- Iced Tea -->
+      <article class="card">
+        <img src="/images/icedtea.jpg" alt="Iced Tea">
+        <h4>Iced Tea — 16oz</h4>
+        <p class="muted">House-brewed black tea served chilled and refreshing.</p>
+        <div class="card-row">
+          <div class="price">$3.75</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p9">+1</button>
+            <button class="btn primary" data-action="add" data-id="p9">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+    
+      <!-- <article class="card">
+        <img src="/images/macchiato.jpg" alt="Macchiato">
+        <h4>Macchiato (16oz)</h4>
+        <p class="muted">Steamed milk with our espresso shot.</p>
+        <div class="card-row">
+          <div class="price">$4.25</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p5">+1</button>
+            <button class="btn primary" data-action="add" data-id="p5">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="/images/matchalatte.jpg" alt="Matcha Latte">
+        <h4>Matcha Latte (16oz)</h4>
+        <p class="muted">Steamed milk with our espresso shot.</p>
+        <div class="card-row">
+          <div class="price">$4.25</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p5">+1</button>
+            <button class="btn primary" data-action="add" data-id="p5">Add to Cart</button>
+          </div>
+        </div>
+      </article> -->
+
+      <!--<article class="card">
+        <img src="/images/" alt="Latte">
+        <h4>Latte (16oz)</h4>
+        <p class="muted">Steamed milk with our espresso shot.</p>
+        <div class="card-row">
+          <div class="price">$4.25</div>
+          <div class="card-actions">
+            <button class="btn" data-action="add-1" data-id="p5">+1</button>
+            <button class="btn primary" data-action="add" data-id="p5">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    -->
+
+
+    </section>
+
+    <section class="cart-summary container small">
+      <h3>Your Order</h3>
+      <div id="cart-preview" class="cart-preview"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Lake View Coffee Roastery</h4>
+        <p class="muted">123 Lakeside Ave, City, State</p>
+      </div>
+      <br>
+      <div>
+        <h4>Hours</h4>
+        <p class="muted">Mon-Fri 7 am - 6 pm • Sat-Sun 8 am - 5 pm</p>
+      </div>
+      <br>
+      <div>
+        <h4>Contact</h4>
+        <p class="muted">hello@lakeviewcoffee.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>
