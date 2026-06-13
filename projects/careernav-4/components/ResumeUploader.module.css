@@ -1,0 +1,116 @@
+/* components/ResumeUploader.module.css */
+
+.uploader {
+  position: sticky;
+  top: 84px;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.dropZone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl) var(--space-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: var(--space-xl);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dropZone:hover {
+  border-color: rgba(37, 99, 235, 0.5);
+  background: var(--color-primary-glow);
+}
+
+.dragOver {
+  border-color: var(--color-primary);
+  background: rgba(37, 99, 235, 0.08);
+  transform: scale(1.01);
+}
+
+.hasFile {
+  border-style: solid;
+  border-color: rgba(37, 99, 235, 0.4);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.fileInput {
+  display: none;
+}
+
+.dropContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.dropIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.dropContent p {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.dropContent span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.fileIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.fileName {
+  font-weight: 600;
+  color: var(--color-text);
+  word-break: break-all;
+}
+
+.fileSize {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.removeFile {
+  margin-left: auto;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--color-error);
+  border-radius: var(--radius-sm);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.removeFile:hover {
+  background: rgba(239, 68, 68, 0.2);
+}

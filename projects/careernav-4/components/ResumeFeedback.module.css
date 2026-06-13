@@ -1,0 +1,204 @@
+/* components/ResumeFeedback.module.css */
+
+.feedback {
+  position: sticky;
+  top: 84px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.header h2 {
+  font-size: 1.25rem;
+}
+
+.headerMeta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-lg) 0;
+}
+
+.section {
+  margin-bottom: var(--space-xl);
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.tagGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.feedbackList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.feedbackItem {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-left: 3px solid;
+}
+
+.strength {
+  background: rgba(16, 185, 129, 0.06);
+  border-color: var(--color-success);
+  color: var(--color-text);
+}
+
+.weakness {
+  background: rgba(245, 158, 11, 0.06);
+  border-color: var(--color-warning);
+  color: var(--color-text);
+}
+
+.suggestion {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.careerPath {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.careerPathText {
+  font-size: 0.9rem;
+  color: var(--color-primary-light);
+  font-weight: 500;
+}
+
+.roadmapPreview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.roadmapPhase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+.phaseHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.phaseTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  background: var(--color-primary-glow);
+  border-radius: var(--radius-full);
+  padding: 2px 8px;
+}
+
+.phaseTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.phaseHint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Analyzing state */
+.analyzingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+  gap: var(--space-md);
+}
+
+.analyzingState h3 {
+  font-size: 1.1rem;
+}
+
+.analyzingState p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.analyzingSteps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  text-align: left;
+  width: 100%;
+  max-width: 280px;
+}
+
+.analyzingStep {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  animation: pulse 1.5s ease infinite;
+}
+
+.stepDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .twoCol { grid-template-columns: 1fr; }
+  .feedback { position: static; max-height: none; }
+}
